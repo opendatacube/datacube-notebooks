@@ -15,10 +15,11 @@ The [open data cube](https://www.opendatacube.org/) is used in these notebooks t
 <br>
 
 ## List of notebooks 
+<br>  
 
  **Loading Data**  
  
 This notebook details retrieval of data from the  [`open data cube`](https://www.opendatacube.org/).  Topics include establishing a connection to the data cube, defining what data gets loaded, and a high level description of the `xarray` object returned by the load operation   
-
->Link: [datacube load tutorial](notebooks/Load%20Tutorial/loading_from_data_cube.ipynb)
-Data:  `GPM` 
+  
+>Link: [datacube load tutorial](notebooks/Load%20Tutorial/loading_from_data_cube.ipynb)  
+Data:  `GPM`   
