@@ -28,4 +28,4 @@ Data:  `GPM`
 
    This notebook runs regression on an NDVI time series. Slope of a regressed line is used as proxy to determine vegetation gain or loss. Based on the publication *Assessment of Forest Degradation in Vietnam Using Landsat Time Series Data* by Vogelmann Et al.   
 > Link: [forest degredation](./Forest%20Degredation%20using%20Regression%20Analysis%20on%20NDVI/Forest_Degradation_Vogelmann_et_al.ipynb)  
-> Data: Landsat 7 Collection 1
+> Data: `Landsat 7 Collection 1`
