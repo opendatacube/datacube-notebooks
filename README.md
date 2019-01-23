@@ -19,13 +19,32 @@ The [open data cube](https://www.opendatacube.org/) is used in these notebooks t
 
 - **Loading Data**  
  
-This notebook details retrieval of data from the  [`open data cube`](https://www.opendatacube.org/).  Topics include establishing a connection to the data cube, defining what data gets loaded, and a high level description of the `xarray` object returned by the load operation   
+   This notebook details retrieval of data from the  [`open data cube`](https://www.opendatacube.org/).  Topics include establishing a connection to the data cube, defining what data gets loaded, and a high level description of the `xarray` object returned by the load operation   
   
->Link: [datacube load tutorial](notebooks/Load%20Tutorial/loading_from_data_cube.ipynb)  
+  >Link: [datacube load tutorial](notebooks/Load%20Tutorial/loading_from_data_cube.ipynb)  
 Data:  `GPM`   
 
 - **Forest Degradation using Linear Regression Analysis**  
 
-   This notebook runs regression on an NDVI time series. Slope of a regressed line is used as proxy to determine vegetation gain or loss. Based on the publication *Assessment of Forest Degradation in Vietnam Using Landsat Time Series Data* by Vogelmann Et al.   
-> Link: [forest degredation](./Forest%20Degredation%20using%20Regression%20Analysis%20on%20NDVI/Forest_Degradation_Vogelmann_et_al.ipynb)  
-> Data: `Landsat 7 Collection 1`
+   This notebook runs regression on an NDVI time series. Slope of a regressed line is used as proxy to determine vegetation gain or loss. Based on the publication *Assessment of Forest Degradation in Vietnam Using Landsat Time Series Data* by Vogelmann Et al.  
+    
+  > Link: [forest degredation](./Forest%20Degredation%20using%20Regression%20Analysis%20on%20NDVI/Forest_Degradation_Vogelmann_et_al.ipynb)  
+  > Data: `Landsat 7 Collection 1`
+
+
+- **Cloud Analysis on Landsat**  
+
+  This notebook compiles a series of summaries and visualizations regarding cloud coverage on landsat imagery. 
+  > Link: [cloud analysis](./Cloud%20Analysis)  
+  > Data: `Landsat 7 Collection 1`  
+
+- **Coastal Change**
+   This directory houses notebooks on coastal analysis, including a very simple coastline classifier.   
+  > Link: [coastal_change](./Coastal%20Change)  
+  > Data: `Landsat 7 Collection 1`  
+   
+- **Land Change Detection on ALOS imagery**
+  This directory houses a change detection case-study in vietnam on ALOS imagery.   
+  > Link: [land change](./Land%20Change%20Detection%20on%20ALOS%20imagery)  
+  > Data: `ALOS2 PALSAR2 SCANSAR`  
+  
