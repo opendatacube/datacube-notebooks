@@ -435,7 +435,7 @@ def create_hdmedians_multiple_band_mosaic(dataset_in,
     Returns
     -------
     dataset_out: xarray.Dataset
-        Compositited data with the format:
+        Composited data with the format:
         coordinates: latitude, longitude
         variables: same as dataset_in
     """
