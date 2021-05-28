@@ -81,7 +81,7 @@ def create_mosaic(dataset_in, clean_mask=None, no_data=-9999, dtype=None, interm
     Returns
     -------
     dataset_out: xarray.Dataset
-        Compositited data with the format:
+        Composited data with the format:
         coordinates: latitude, longitude
         variables: same as dataset_in
     """
@@ -190,7 +190,7 @@ def create_median_mosaic(dataset_in, clean_mask=None, no_data=-9999, dtype=None,
     Returns
     -------
     dataset_out: xarray.Dataset
-        Compositited data with the format:
+        Composited data with the format:
         coordinates: latitude, longitude
         variables: same as dataset_in
     """
@@ -235,7 +235,7 @@ def create_max_ndvi_mosaic(dataset_in, clean_mask=None, no_data=-9999, dtype=Non
     Returns
     -------
     dataset_out: xarray.Dataset
-        Compositited data with the format:
+        Composited data with the format:
         coordinates: latitude, longitude
         variables: same as dataset_in
     """
@@ -299,7 +299,7 @@ def create_min_ndvi_mosaic(dataset_in, clean_mask=None, no_data=-9999, dtype=Non
     Returns
     -------
     dataset_out: xarray.Dataset
-        Compositited data with the format:
+        Composited data with the format:
         coordinates: latitude, longitude
         variables: same as dataset_in
     """
