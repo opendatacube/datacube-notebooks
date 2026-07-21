@@ -341,19 +341,19 @@ def create_min_ndvi_mosaic(dataset_in, clean_mask=None, no_data=-9999, dtype=Non
     dataset_out = restore_or_convert_dtypes(dtype, band_list, dataset_in_dtypes, dataset_out, no_data)
     return dataset_out
 
-def unpack_bits(land_cover_endcoding, data_array, cover_type):
+def unpack_bits(land_cover_encoding, data_array, cover_type):
     """
 	Description:
 		Unpack bits for end of ls7 and ls8 functions 
 	-----
 	Input:
-		land_cover_encoding(dict hash table) land cover endcoding provided by ls7 or ls8
+		land_cover_encoding(dict hash table) land cover encoding provided by ls7 or ls8
         data_array( xarray DataArray)
         cover_type(String) type of cover
 	Output:
         unpacked DataArray
 	"""
-    boolean_mask = np.isin(data_array.values, land_cover_endcoding[cover_type]) 
+    boolean_mask = np.isin(data_array.values, land_cover_encoding[cover_type]) 
     return xr.DataArray(boolean_mask.astype(bool),
                         coords = data_array.coords,
                         dims = data_array.dims,
@@ -362,7 +362,7 @@ def unpack_bits(land_cover_endcoding, data_array, cover_type):
 
 def ls8_unpack_qa( data_array , cover_type):
 
-    land_cover_endcoding = dict( fill         =[1] ,
+    land_cover_encoding = dict( fill         =[1] ,
                                  clear        =[322, 386, 834, 898, 1346],
                                  water        =[324, 388, 836, 900, 1348],
                                  shadow       =[328, 392, 840, 904, 1350],
@@ -375,11 +375,11 @@ def ls8_unpack_qa( data_array , cover_type):
                                  high_conf_cir=[834, 836, 840, 848, 864, 880, 898, 900, 904, 912, 928, 944],
                                  terrain_occ  =[1346,1348, 1350, 1352]
                                )
-    return unpack_bits(land_cover_endcoding, data_array, cover_type)
+    return unpack_bits(land_cover_encoding, data_array, cover_type)
 
 def ls7_unpack_qa( data_array , cover_type):
 
-    land_cover_endcoding = dict( fill     =  [1],
+    land_cover_encoding = dict( fill     =  [1],
                                  clear    =  [66,  130],
                                  water    =  [68,  132],
                                  shadow   =  [72,  136],
@@ -389,11 +389,11 @@ def ls7_unpack_qa( data_array , cover_type):
                                  med_conf =  [130, 132, 136, 144, 160, 176],
                                  high_conf=  [224]
                                )
-    return unpack_bits(land_cover_endcoding, data_array, cover_type)
+    return unpack_bits(land_cover_encoding, data_array, cover_type)
 
 def ls5_unpack_qa( data_array , cover_type):
 
-    land_cover_endcoding = dict( fill     =  [1],
+    land_cover_encoding = dict( fill     =  [1],
                                  clear    =  [66,  130],
                                  water    =  [68,  132],
                                  shadow   =  [72,  136],
@@ -403,7 +403,7 @@ def ls5_unpack_qa( data_array , cover_type):
                                  med_conf =  [130, 132, 136, 144, 160, 176],
                                  high_conf=  [224]
                                )
-    return unpack_bits(land_cover_endcoding, data_array, cover_type)
+    return unpack_bits(land_cover_encoding, data_array, cover_type)
 
 
 def create_hdmedians_multiple_band_mosaic(dataset_in,
